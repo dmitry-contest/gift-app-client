@@ -1,0 +1,34 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    display: flex;
+    padding-top: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 16px;
+}
+
+.title {
+    color: var(--text-color);
+}
+
+.description {
+    color: var(--label-secondary);
+    padding: 0 42px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.giftNameClassName {
+    order: -1;
+    color: var(--label-secondary);
+    font-weight: vars.$font-weight-400;
+    font-size: vars.$font-size-12;
+}
+
+.giftClassName {
+    padding: 6px 0 12px;
+}

@@ -1,0 +1,65 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    width: 100%;
+    justify-self: end;
+    background-color: var(--background-tabbar-color);
+    border-top: 0.33px solid var(--tabbar-border-color);
+}
+
+.menuItems {
+    margin-top: 8px;
+    display: flex;
+}
+
+.icon {
+    fill: vars.$icons;
+}
+
+.item {
+    width: 25%;
+    padding: 4px;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    text-decoration-line: none;
+    align-items: center;
+    gap: 4px;
+    color: var(--tabbar-label-color);
+    letter-spacing: 0.1px;
+    -webkit-user-select: none;
+    user-select: none;
+
+    &:active {
+        opacity: 1;
+        background-color: transparent;
+    }
+
+    @include fonts.sfProText(
+        vars.$font-size-10,
+        vars.$font-weight-500,
+        vars.$line-height-12
+    );
+}
+
+.selectedLink {
+    color: vars.$blue;
+}
+
+.selectedIcon {
+    svg path {
+        fill: vars.$blue;
+    }
+}
+
+.homeIndicator {
+    height: 34px;
+}
+
+.lottie {
+    width: 26px;
+    height: 26px;
+}

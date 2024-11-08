@@ -1,0 +1,54 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.list {
+    padding: 0 10px 0 16px;
+    border-top: 0.33px solid var(--tabbar-border-color);
+}
+
+.description {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.giftIcon,
+.descriptionText {
+    color: vars.$primary;
+}
+
+.descriptionText {
+    letter-spacing: vars.$letter-spacing-10;
+    @include fonts.sfProText(
+        vars.$font-size-13,
+        vars.$font-weight-400,
+        vars.$line-height-16
+    );
+}
+
+.customSign {
+    border-radius: 4px;
+    padding: 0 4px;
+    letter-spacing: vars.$letter-spacing-10;
+    background-color: var(--leaderboard-you-background);
+    color: var(--label-secondary);
+
+    @include fonts.sfProText(
+        vars.$font-size-11,
+        vars.$font-weight-500,
+        vars.$line-height-14
+    );
+}
+
+.listItem {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 10px 0 16px;
+    border-top: 0.33px solid var(--tabbar-border-color);
+    background-color: var(--background-color);
+}
+
+.title {
+    color: var(--text-color);
+}

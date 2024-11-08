@@ -1,0 +1,29 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 0 16px 0 12px;
+    background-color: vars.$primary;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: vars.$white;
+    letter-spacing: vars.$letter-spacing-8;
+    height: 30px;
+
+    @include fonts.sfProText(
+        vars.$font-size-13,
+        vars.$font-weight-600,
+        vars.$line-height-18
+    );
+}
+
+.disabled {
+    padding: 0 16px;
+    color: var(--label-secondary);
+    background-color: var(--background-tabbar-color);
+}

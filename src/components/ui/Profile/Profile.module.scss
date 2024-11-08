@@ -1,0 +1,31 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notMeInfo {
+    justify-content: center;
+}
+
+.gift {
+    padding: 6px 0 12px;
+}
+
+.name {
+    letter-spacing: vars.$letter-spacing-43;
+
+    @include fonts.sfProText(
+        vars.$font-size-14,
+        vars.$font-weight-500,
+        vars.$line-height-18
+    );
+}

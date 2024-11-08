@@ -1,0 +1,19 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.text {
+    color: var(--text-color);
+    letter-spacing: vars.$letter-spacing-43;
+
+    @include fonts.sfProText(
+        vars.$font-size-24,
+        vars.$font-weight-600,
+        vars.$line-height-32
+    );
+}

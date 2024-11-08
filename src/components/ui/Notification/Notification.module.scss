@@ -1,0 +1,54 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    position: absolute;
+    display: flex;
+    padding: 9px 16px;
+    border-radius: 14px;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--background-notification);
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.lottie {
+    width: 28px;
+    height: 28px;
+}
+
+.title,
+.description {
+    color: var(--white);
+    letter-spacing: vars.$letter-spacing-15;
+
+    @include fonts.sfPro(
+        vars.$font-size-14,
+        vars.$font-weight-600,
+        vars.$line-height-18
+    );
+}
+
+.description {
+    font-weight: vars.$font-weight-400;
+}
+
+.action {
+    all: unset;
+    color: vars.$cyan;
+    cursor: pointer;
+    letter-spacing: vars.$letter-spacing-43;
+
+    @include fonts.sfPro(
+        vars.$font-size-17,
+        vars.$font-weight-400,
+        vars.$line-height-22
+    );
+}

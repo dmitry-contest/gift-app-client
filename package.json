@@ -1,0 +1,62 @@
+{
+    "name": "gift-app-client",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite serve --host",
+        "build": "rm -rf build && tsc -b && vite build",
+        "preview": "vite preview",
+        "lint:fix": "eslint --fix --ext .ts,.tsx src",
+        "test:types": "tsc --noEmit",
+        "lint": "eslint",
+        "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,md}\"",
+        "prepare": "husky",
+        "install:husky": "npx husky init && echo \"npm run test:types && npm run lint:fix\" > .husky/pre-commit",
+        "init": "npm install && npm run install:husky"
+    },
+    "dependencies": {
+        "@telegram-apps/sdk-react": "^2.0.9",
+        "@dmitry-contest/api-sdk": "^0.0.9",
+        "classnames": "^2.5.1",
+        "lottie-react": "^2.4.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-error-boundary": "^4.1.2",
+        "react-i18next": "^15.1.0",
+        "react-router-dom": "^6.27.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.10.0",
+        "@types/node": "^22.5.4",
+        "@types/react": "^18.3.5",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^8.5.0",
+        "@typescript-eslint/parser": "^8.5.0",
+        "@vitejs/plugin-react": "^4.3.1",
+        "@vitejs/plugin-react-swc": "^3.7.1",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.30.0",
+        "eslint-plugin-jsx-a11y": "^6.10.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-react": "^7.35.2",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.11",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "globals": "^15.9.0",
+        "husky": "^9.1.5",
+        "i18next": "^23.16.4",
+        "prettier": "^3.3.3",
+        "sass-embedded": "^1.80.5",
+        "typescript": "^5.5.3",
+        "typescript-eslint": "^8.4.0",
+        "vite": "^5.4.3",
+        "vite-plugin-mkcert": "^1.17.6",
+        "vite-plugin-svgr": "^4.2.0"
+    },
+    "author": {
+        "name": "Dmitry Lebedev",
+        "email": "dmitry@lebedev.blog"
+    }
+}

@@ -1,0 +1,98 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container,
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin-top: 16px;
+}
+
+.gift {
+    margin: 0 16px;
+    height: calc(100vw - 32px);
+}
+
+.lottie {
+    margin: auto 0;
+    animation: slideInRight 300ms ease-out;
+}
+
+.description {
+    margin: 12px 16px;
+    gap: 8px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title {
+    color: var(--text-color);
+}
+
+.text {
+    color: var(--label-secondary);
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translate(-100%, -100%);
+    }
+    25% {
+        transform: translate(-50%, -75%);
+    }
+    50% {
+        transform: translate(-25%, -50%);
+    }
+    75% {
+        transform: translate(-10%, -25%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.recentlyActions {
+    padding: 24px 16px 0;
+
+    > span {
+        padding-bottom: 12px;
+        color: vars.$date;
+    }
+}
+
+.actionTitle {
+    color: var(--label-secondary);
+    letter-spacing: vars.$letter-spacing-10;
+
+    @include fonts.sfProText(
+        vars.$font-size-13,
+        vars.$font-weight-400,
+        vars.$line-height-16
+    );
+}
+
+.actionDescription {
+    display: flex;
+    color: var(--text-color);
+
+    @include fonts.sfPro(
+        vars.$font-size-17,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+
+    > button {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: vars.$primary;
+    }
+}

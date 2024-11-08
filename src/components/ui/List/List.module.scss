@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0 0;
+}
+
+.listItem {
+    display: flex;
+    gap: 12px;
+    padding-top: 8px;
+
+    &:last-of-type {
+        > div {
+            border-bottom: none;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.33px solid var(--tabbar-border-color);
+    padding-bottom: 8px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,33 @@
+@use 'src/styles/variables' as vars;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.giftIcon {
+    path {
+        fill: vars.$blue;
+    }
+}
+
+.title {
+    color: var(--text-color);
+    margin: 16px 0 8px;
+}
+
+.description {
+    color: var(--label-secondary);
+    margin-bottom: 32px;
+}
+
+.gift {
+    > div:first-of-type {
+        padding-top: 8px;
+    }
+    > button {
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,155 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 12px;
+    cursor: pointer;
+    align-items: center;
+    z-index: 2;
+}
+
+.withoutPattern {
+    background-color: var(--background-empty-gifts-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px 0 6px;
+    width: 100%;
+}
+
+.amount {
+    color: var(--label-secondary);
+    flex-grow: 1;
+    text-align: end;
+    letter-spacing: vars.$letter-spacing-8;
+}
+
+.amount-sm {
+    @include fonts.sfProText(
+        vars.$font-size-12,
+        vars.$font-weight-400,
+        vars.$line-height-18
+    );
+}
+
+.amount-md {
+    @include fonts.sfProText(
+        vars.$font-size-13,
+        vars.$font-weight-400,
+        vars.$line-height-18
+    );
+}
+
+.size-sm {
+    height: 160px;
+}
+
+.size-md,
+.pattern {
+    width: 174.5px;
+    height: 246px;
+}
+
+.size-lg {
+    height: auto;
+}
+
+.name {
+    color: var(--text-color);
+    align-self: center;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.name-sm {
+    letter-spacing: vars.$letter-spacing-8;
+
+    @include fonts.sfProText(
+        vars.$font-size-12,
+        vars.$font-weight-400,
+        vars.$line-height-18
+    );
+}
+
+.name-md {
+    letter-spacing: vars.$letter-spacing-43;
+
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-600,
+        vars.$line-height-22
+    );
+}
+
+.lottie-sm {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+}
+
+.lottie-md {
+    width: 128px;
+    height: 128px;
+    align-self: center;
+}
+
+.lottie-lg {
+    align-self: center;
+    height: 274px;
+}
+
+.pattern,
+.patternLight {
+    border-radius: 12px;
+    position: absolute;
+    opacity: 0.1;
+    z-index: -1000;
+}
+
+.pattern-cake {
+    background: linear-gradient(
+        180deg,
+        rgba(254, 160, 65, 0.2) 0%,
+        rgba(254, 159, 65, 0.1) 100%
+    );
+}
+
+.pattern-star-green {
+    background: linear-gradient(
+        180deg,
+        rgba(70, 209, 0, 0.2) 0%,
+        rgba(70, 209, 0, 0.06) 100%
+    );
+}
+
+.pattern-star-blue {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 122, 255, 0.2) 0%,
+        rgba(0, 122, 255, 0.05) 100%
+    );
+}
+
+.pattern-star-red {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 71, 71, 0.2) 0%,
+        rgba(255, 71, 71, 0.05) 100%
+    );
+}
+
+.button-sm {
+    max-width: 83px;
+    width: 83px;
+    padding: 0;
+}

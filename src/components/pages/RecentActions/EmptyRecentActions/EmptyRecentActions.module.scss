@@ -1,0 +1,36 @@
+@use 'src/styles/mixins/fonts' as fonts;
+@use 'src/styles/variables' as vars;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.title,
+.hint {
+    color: var(--text-color);
+    letter-spacing: -0.43px;
+}
+
+.title {
+    margin: 16px 0 8px;
+
+    @include fonts.sfProText(
+        vars.$font-size-24,
+        vars.$font-weight-600,
+        vars.$line-height-32
+    );
+}
+
+.hint {
+    padding: 0 30px;
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-400,
+        vars.$line-height-22
+    );
+}

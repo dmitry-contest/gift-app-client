@@ -1,0 +1,19 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.currency {
+    display: flex;
+    align-items: center;
+}
+
+.inverted {
+    letter-spacing: vars.$letter-spacing-43;
+    color: var(--text-color);
+    gap: 8px;
+
+    @include fonts.sfPro(
+        vars.$font-size-17,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+}

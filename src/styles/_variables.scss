@@ -1,0 +1,105 @@
+$white: #ffffff;
+$black: #000000;
+$primary: #007aff;
+$blue: #007aff;
+$cyan: #5ac8fa;
+$gold: #f1aa05;
+$purple: #af51de;
+$green: #35c759;
+$separator: #3c3c435c;
+$icons: #959595;
+$labelSecondary: #8e8e93;
+$tabbar: #545458a6;
+$date: #6d6d71;
+$bgSecondary: #efeff3;
+$bgNotification: #2d2d2dcc;
+$bgTabBar: #f1f1f2bf;
+
+[data-theme='dark'],
+[data-theme='light'] {
+    --white: #ffffff;
+    --green: #35c759;
+    --label-secondary: #8e8e93;
+    --leaderboard-you-background: #8e8e9333;
+}
+
+:root {
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --background-tabbar-color: #f1f1f2bf;
+    --tabbar-border-color: #3c3c435c;
+    --tabbar-label-color: #545458a6;
+    --background-empty-gifts-color: #efeff3;
+    --background-secondary: #efeff3;
+    --switch-selected-background-color: #ffffff;
+    --background-notification: #2d2d2dcc;
+    --modal-close-button-background: #e3e3e8;
+    --modal-background-color: #efeff3;
+    --modal-gift-border-color: #3c3c435c;
+    --search-text: #3c3c4399;
+}
+
+[data-theme='dark'] {
+    --text-color: #ffffff;
+    --background-color: #1c1c1e;
+    --background-tabbar-color: #1e1e1ebf;
+    --tabbar-border-color: #3c3c435c;
+    --tabbar-label-color: #787a7dbf;
+    --background-empty-gifts-color: #2c2c2e;
+    --background-secondary: #000000;
+    --switch-selected-background-color: #2c2c2e;
+    --background-notification: #000000cc;
+    --modal-close-button-background: #2c2c2e;
+    --modal-background-color: #1c1c1e;
+    --modal-gift-border-color: #ffffff33;
+    --search-text: #8e8e93;
+}
+
+$font-size-6: 8px;
+$font-size-10: 10px;
+$font-size-11: 11px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-17: 17px;
+$font-size-24: 24px;
+
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+
+$line-height-10: 10px;
+$line-height-12: 12px;
+$line-height-14: 14px;
+$line-height-16: 16px;
+$line-height-18: 18px;
+$line-height-22: 22px;
+$line-height-30: 30px;
+$line-height-32: 32px;
+
+$font-family-sf-pro-text:
+    'SF Pro Text',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Roboto',
+    'Apple Color Emoji',
+    'Helvetica Neue',
+    sans-serif;
+
+$font-family-sf-pro:
+    'SF Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Roboto',
+    'Apple Color Emoji',
+    'Helvetica Neue',
+    sans-serif;
+
+$letter-spacing-8: -0.08px;
+$letter-spacing-10: -0.1px;
+$letter-spacing-15: -0.15px;
+$letter-spacing-40: -0.4px;
+$letter-spacing-41: -0.41px;
+$letter-spacing-43: -0.43px;
+$letter-spacing-44: -0.44px;

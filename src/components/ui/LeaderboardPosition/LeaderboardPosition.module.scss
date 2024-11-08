@@ -1,0 +1,18 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.icon {
+    width: 22px;
+    height: 22px;
+}
+
+.text {
+    letter-spacing: -0.43px;
+    color: var(--label-secondary);
+
+    @include fonts.sfProText(
+        vars.$font-size-15,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+}

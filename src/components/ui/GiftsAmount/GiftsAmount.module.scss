@@ -1,0 +1,16 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.withBackground {
+    padding: 0 8px;
+    background: rgba(0, 122, 255, 0.12);
+    border-radius: 100px;
+    color: vars.$primary;
+    letter-spacing: -0.1;
+
+    @include fonts.sfProText(
+        vars.$font-size-14,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+}

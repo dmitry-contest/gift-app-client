@@ -1,0 +1,19 @@
+@use 'src/styles/variables' as vars;
+
+@mixin sfProText($fontSize, $fontWeight, $lineHeight) {
+    font-family: vars.$font-family-sf-pro-text;
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-variant: normal;
+    line-height: $lineHeight;
+}
+
+@mixin sfPro($fontSize, $fontWeight, $lineHeight) {
+    font-family: vars.$font-family-sf-pro;
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    font-variant: normal;
+    line-height: $lineHeight;
+}

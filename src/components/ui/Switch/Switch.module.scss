@@ -1,0 +1,33 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    border-radius: 99px;
+    padding: 2px;
+    background-color: var(--background-secondary);
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.item {
+    all: unset;
+    border-radius: 99px;
+    cursor: pointer;
+    color: var(--label-secondary);
+    letter-spacing: vars.$letter-spacing-41;
+
+    padding: 3px 10px;
+
+    @include fonts.sfPro(
+        vars.$font-size-14,
+        vars.$font-weight-600,
+        vars.$line-height-22
+    );
+}
+
+.selectedItem {
+    background-color: var(--switch-selected-background-color);
+    outline: 0.5px solid #0000000a;
+    color: var(--text-color);
+}

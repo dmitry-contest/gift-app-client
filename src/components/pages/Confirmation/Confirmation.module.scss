@@ -1,0 +1,76 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container,
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+    margin: 0 16px;
+}
+
+.notification {
+    bottom: 16px;
+}
+
+.innerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gift {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.animation {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -100px;
+}
+
+.name {
+    letter-spacing: vars.$letter-spacing-43;
+    margin: 16px 0 8px;
+    color: var(--text-color);
+
+    @include fonts.sfProText(
+        vars.$font-size-24,
+        vars.$font-weight-600,
+        vars.$line-height-30
+    );
+}
+
+.description {
+    letter-spacing: vars.$letter-spacing-43;
+    padding: 0 40px;
+    color: var(--text-color);
+
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-400,
+        vars.$line-height-22
+    );
+}
+
+.lottieGift {
+    width: 100px;
+    height: 100px;
+}
+
+.boldText {
+    font-weight: vars.$font-weight-500;
+}

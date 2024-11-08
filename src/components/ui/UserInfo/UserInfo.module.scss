@@ -1,0 +1,40 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    margin-bottom: 20px;
+}
+
+.recentActions {
+    all: unset;
+    display: flex;
+    align-items: center;
+    color: vars.$primary;
+    cursor: pointer;
+    letter-spacing: vars.$letter-spacing-43;
+    margin-bottom: 24px;
+
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+}
+
+.giftsHint {
+    color: var(--label-secondary);
+    letter-spacing: vars.$letter-spacing-44;
+    margin-bottom: 24px;
+
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-400,
+        vars.$line-height-22
+    );
+}

@@ -1,0 +1,143 @@
+@use 'src/styles/mixins/fonts' as fonts;
+@use 'src/styles/variables' as vars;
+
+.container,
+.header,
+.action {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    > span:first-of-type {
+        color: var(--text-color);
+    }
+
+    > span:last-of-type {
+        color: var(--label-secondary);
+    }
+}
+
+.container {
+    margin: 0 16px;
+}
+
+.header {
+    margin: 24px 0 16px;
+    align-items: center;
+    gap: 8px;
+}
+
+.date {
+    padding: 24px 0 12px;
+    color: vars.$date;
+    letter-spacing: vars.$letter-spacing-8;
+
+    @include fonts.sfPro(
+        vars.$font-size-13,
+        vars.$font-weight-400,
+        vars.$line-height-18
+    );
+}
+
+.listTitle {
+    color: var(--label-secondary);
+    letter-spacing: vars.$letter-spacing-10;
+
+    @include fonts.sfProText(
+        vars.$font-size-13,
+        vars.$font-weight-400,
+        vars.$line-height-16
+    );
+}
+
+.listDescription {
+    color: var(--text-color);
+    letter-spacing: vars.$letter-spacing-44;
+
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+}
+
+.addonPaid,
+.addonSentReceived,
+.userNameText {
+    letter-spacing: vars.$letter-spacing-43;
+    color: var(--text-color);
+
+    @include fonts.sfPro(
+        vars.$font-size-15,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+}
+
+.addonSentReceived {
+    display: flex;
+    align-items: center;
+}
+
+.userNameText {
+    color: vars.$primary;
+}
+
+.userNameBtn {
+    all: unset;
+    cursor: pointer;
+}
+
+.lottie {
+    padding: 4px;
+    position: relative;
+    max-height: 40px;
+    border-radius: 12px;
+    background-color: var(--background-empty-gifts-color);
+}
+
+.avatar {
+    background-color: transparent;
+    border-radius: 100px;
+    padding: 0;
+
+    > img {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 100px;
+    }
+}
+
+.lottieGift {
+    width: 32px;
+    height: 32px;
+}
+
+.paidIcon,
+.receivedIcon,
+.sentIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    right: 0;
+    bottom: 0;
+    border: 1.33px solid var(--background-color);
+}
+
+.paidIcon {
+    background-color: vars.$blue;
+}
+
+.sentIcon {
+    background-color: vars.$purple;
+}
+
+.receivedIcon {
+    background-color: vars.$green;
+}

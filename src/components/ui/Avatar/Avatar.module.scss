@@ -1,0 +1,82 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    position: relative;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.emptyImg {
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: vars.$white;
+
+    @include fonts.sfProText(
+        vars.$font-size-24,
+        vars.$font-weight-600,
+        vars.$line-height-32
+    );
+}
+
+.rate {
+    position: absolute;
+    border: 2px solid var(--background-color);
+    color: vars.$white;
+    padding: 0 8px;
+    border-radius: 100px;
+    background: vars.$labelSecondary;
+    top: 92px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include fonts.sfProText(
+        vars.$font-size-14,
+        vars.$font-weight-500,
+        vars.$line-height-22
+    );
+}
+
+.gold {
+    background-color: vars.$gold;
+}
+
+.size-16,
+.size-20 {
+    @include fonts.sfProText(
+        vars.$font-size-6,
+        vars.$font-weight-400,
+        vars.$line-height-10
+    );
+}
+
+.size-40 {
+    @include fonts.sfProText(
+        vars.$font-size-12,
+        vars.$font-weight-400,
+        vars.$line-height-10
+    );
+}
+
+.size-16 {
+    width: 16px;
+    height: 16px;
+}
+
+.size-20 {
+    width: 20px;
+    height: 20px;
+}
+
+.size-40 {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+}

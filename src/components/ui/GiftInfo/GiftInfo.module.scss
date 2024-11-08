@@ -1,0 +1,118 @@
+@use 'src/styles/variables' as vars;
+@use 'src/styles/mixins/fonts' as fonts;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.lottie {
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+}
+
+.title {
+    color: var(--text-color);
+    padding: 12px 0 24px;
+
+    letter-spacing: vars.$letter-spacing-43;
+
+    @include fonts.sfProText(
+        vars.$font-size-24,
+        vars.$font-weight-600,
+        vars.$line-height-32
+    );
+}
+
+.table {
+    background-color: var(--switch-selected-background-color);
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+}
+
+.row {
+    display: flex;
+    padding: 10px 0;
+
+    > * {
+        padding: 0 16px;
+    }
+}
+
+.columnNames,
+.values {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    letter-spacing: vars.$letter-spacing-43;
+
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-400,
+        vars.$line-height-22
+    );
+}
+
+.columnNames {
+    border-right: 0.33px solid var(--modal-gift-border-color);
+    letter-spacing: -0.44px;
+    color: var(--label-secondary);
+    //align-items: flex-start;
+
+    > span {
+        padding: 10px 16px;
+
+        border-bottom: 0.33px solid var(--modal-gift-border-color);
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+}
+
+.values {
+    width: 100%;
+    color: var(--text-color);
+
+    > div {
+        padding: 10px 16px;
+        border-bottom: 0.33px solid var(--modal-gift-border-color);
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+}
+
+.currency {
+    letter-spacing: vars.$letter-spacing-44;
+    font-weight: vars.$font-weight-400;
+}
+
+.senderInfo {
+    display: flex;
+    gap: 8px;
+
+    > button {
+        all: unset;
+        cursor: pointer;
+
+        > div {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.userNameText {
+    color: vars.$primary;
+
+    @include fonts.sfProText(
+        vars.$font-size-17,
+        vars.$font-weight-400,
+        vars.$line-height-22
+    );
+}
